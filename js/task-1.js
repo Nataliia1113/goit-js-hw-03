@@ -1,12 +1,11 @@
 function slugify(title) {
+ 
+  const lowercaseTitle = title.toLowerCase();
+  const slug = lowercaseTitle.split(' ').join('-');
 
-  return title.toLowerCase().replace(/\s+/g, '-');
+  return slug;
 }
 
-const title = "Arrays for Beginners";
-const slug = slugify(title);
-
-console.log(slug); 
 console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
 console.log(slugify("English for developer")); // "english-for-developer"
 console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
